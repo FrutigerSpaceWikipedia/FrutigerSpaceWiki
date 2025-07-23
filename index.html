@@ -6,102 +6,81 @@
     <title>Frutiger Space Wiki - Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="assets/FrutigerWikiLogo.png" type="image/x-icon">
+    <meta property="og:title" content="Frutiger Space Wiki">
+    <meta property="og:description" content="Dive into the vibrant and nostalgic universe of Frutiger Space. This wiki is your comprehensive guide to everything the game has to offer.">
+    <meta property="og:url" content="https://frutigerspace.wiki/">
+    <meta property="og:image" content="assets/FrutigerWikiLogo.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#80dfff">
 </head>
 <body>
 <div class="background-area">
-    <img src="assets/asadal_stock_13.jpg" alt="backgroundimage">
+    <img src="assets/asadal_stock_13.jpg" alt="Abstract blue and yellow background">
 </div>
+
 <div class="container">
-    <div class="header">
+    <header class="header">
         <div class="logo-area">
             <img src="assets/FrutigerWikiLogo.png" alt="Frutiger Space Logo" class="wiki-logo">
         </div>
-        <div class="topic-controller">
-            <div class="topics-bar">
-                <div class="topic-folder">
-                    <span>Main Game</span>
-                    <div class="sub-topics">
-                        <a href="#">placeholder</a>
-                    </div>
-                </div>
-                <div class="topic-folder">
-                    <span>News</span>
-                    <div class="sub-topics">
-                        <a href="#">placeholder</a>
-                    </div>
-                </div>
-                <div class="topic-folder">
-                    <span>Community</span>
-                    <div class="sub-topics">
-                        <a href="#">placeholder</a>
-                    </div>
-                </div>
-                <div class="topic-folder">
-                    <span>Info</span>
-                    <div class="sub-topics">
-                        <a href="about-us.html">About us</a>
-                    </div>
-                </div>
-                <div class="topic-folder">
-                    <span>Preferences</span>
-                    <div class="sub-topics">
-                        <a href="themes.html">Theme</a>
-                    </div>
-                </div>
-            </div>
+        <nav class="main-nav">
+            <a href="index.html">Main Game</a>
+            <a href="news.html">News</a>
+            <a href="Community.html">Community</a>
+            <a href="about-us.html">Info</a>
+        </nav>
+        <div id="clock-display" class="clock-display">
         </div>
-    </div>
+    </header>
 
-    <div class="main-content">
-        <div class="left-sidebar">
-            <div class="sidebar-box official-links">
-                <h3>Official Sites</h3>
-                <ul>
-                    <li><a href="https://discord.gg/BEj5gcFD2x" target="_blank" class="link-game-forums"><span>Official Discord Server</span></a></li>
+    <!-- Main Content Grid -->
+    <main class="main-content">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <div class="sidebar-box">
+                <h3>Official Stuff</h3>
+                <ul class="icon-links">
+                    <li><a href="https://discord.gg/BEj5gcFD2x" target="_blank" class="link-discord"><span>Official Discord Server</span></a></li>
                     <li><a href="https://discord.gg/39KpqzZGmY" target="_blank" class="link-discord"><span>Wiki Discord Server</span></a></li>
                     <li><a href="https://store.steampowered.com/app/3591510/Frutiger_Space/" target="_blank" class="link-steam"><span>Wishlist on Steam NOW!</span></a></li>
                 </ul>
             </div>
-            <div class="sidebar-box ko-fi-box">
+            <div class="sidebar-box">
                 <h3>Support the Wiki!</h3>
-                <img src="assets/images-removebg-preview.png" alt="Ko-fi Logo" class="ko-fi-logo">
-                <p>Enjoying the Frutiger Space Wiki? Consider supporting us on Ko-fi! Your donations help us keep the lights on and expand our content.</p>
-                <a href="https://ko-fi.com/" target="_blank" class="ko-fi-button">Buy us a Coffee!</a>
+                <div class="ko-fi-box">
+                    <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi Logo" class="ko-fi-logo">
+                    <p>Enjoying the Frutiger Space Wiki? Consider supporting us on Ko-fi!</p>
+                    <a href="https://ko-fi.com/" target="_blank" class="ko-fi-button">Buy us a Coffee!</a>
+                </div>
             </div>
-            <div class="sidebar-box web-devs">
-                <p>
-                    <img src="https://cyber.dabamos.de/88x31/88x31whitemarble.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/88x31whitemarble.gif" alt="">
+            <div class="sidebar-box">
+                <h3>Web Buttons</h3>
+                <div class="web-buttons">
                     <img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt="">
-                <img src="https://frutigeraero.org/images/resources/buttons/frutiger_aero_community.png" alt="">
-                <img src="https://cdn.discordapp.com/attachments/1053116980451876986/1382191179155902545/button1.png?ex=684a4158&is=6848efd8&hm=d50965d2bcfa03c3cf372866732843c98b64e7a85ecf41470ed17ae31ab9dcfb&" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/any.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/discord2.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/firefox2.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/104.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/88x31whitemarble.gif" alt="">
-                    <img src="https://cyber.dabamos.de/88x31/88x31whitemarble.gif" alt="">
-                </p>
+                    <img src="https://cyber.dabamos.de/88x31/any.gif" alt="Works with any browser button">
+                    <img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="Anything but chrome button">
+                    <img src="https://cyber.dabamos.de/88x31/firefox2.gif" alt="Firefox button">
 
-                </ul>
+                </div>
             </div>
-        </div>
-        <div class="content-area">
-            <div class="main-summary box">
+        </aside>
+
+        <!-- Right Content Area -->
+        <section class="content-area">
+            <div class="box welcome-box">
                 <h2>Welcome to the FrutigerSpace Wikipedia!</h2>
-                <p>Dive into the vibrant and nostalgic universe of <span><b>Frutiger Space</b></span>, the upcoming game that blends retro-futuristic aesthetics with deep exploration and a loyal invest community. This wiki is your comprehensive guide to everything Frutiger Space has to offer, from its well made maps, to it's community driven events.</p>
+                <p>Dive into the vibrant and nostalgic universe of <strong>Frutiger Space</strong>, the upcoming game that blends retro-futuristic aesthetics with deep exploration and a loyal invest community. This wiki is your comprehensive guide to everything Frutiger Space has to offer, from its well made maps, to its community driven events.</p>
             </div>
 
-            <div class="rss-feed-box box">
+            <div class="box rss-feed-box">
                 <h3>Latest News & Updates</h3>
                 <div id="rss-feed-container">
-                    <p class="rss-loading">Loading RSS feed...</p>
+                    <p class="rss-loading">Failed to load RSS feed. Please try again later.</p>
                 </div>
             </div>
 
             <div class="contributors-donators-grid">
-                <div class="box last-contributors">
+                <div class="box">
                     <h3>Top 5 Last Site Contributors</h3>
                     <ul>
                         <li>place holder</li>
@@ -111,7 +90,7 @@
                         <li>place holder</li>
                     </ul>
                 </div>
-                <div class="box last-donators">
+                <div class="box">
                     <h3>Top 5 Last Site Donators</h3>
                     <ul>
                         <li>place holder</li>
@@ -122,25 +101,16 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <div class="footer">
+    <footer class="footer">
         <p>Frutiger Space Wiki 2025™</p>
-    </div>
+    </footer>
 </div>
 
-<script type="text/javascript" src='javascript/background-manager.js'></script>
-<script type="text/javascript" src='javascript/LocalTimer.js'></script>
-<script type="text/javascript" src='javascript/MiscFlavor.js'></script>
-<script type="text/javascript" src='javascript/rss.js'></script>
-<head>
-    <meta property="og:title" content="drysrus.xyz">
-    <meta property="og:description" content="Dive into the vibrant and nostalgic universe of Frutiger Space, the upcoming game that blends retro-futuristic aesthetics with deep exploration and a loyal invest community. This wiki is your comprehensive guide to everything Frutiger Space has to offer, from its well made maps, to it's community driven events.">
-    <meta property="og:url" content="https://frutigerspace.wiki/">
-    <meta property="og:image" content="assets/FrutigerWikiLogo.png">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#191970">
-</head>
+<script src='THE%20ARCHVIECES/background-manager.js'></script>
+<script src='javascript/LocalTimer.js'></script>
+<script src='javascript/rss.js'></script>
 </body>
 </html>

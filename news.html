@@ -4,12 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frutiger Space Wiki - News</title>
-    <link rel="stylesheet" href="/pages/css/styles.css">
-    <link rel="icon" href="/assets/FrutigerWikiLogo.png" type="image/x-icon">
+    <!-- Link to the main stylesheet first -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Then link to the news-specific stylesheet -->
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="icon" href="assets/FrutigerWikiLogo.png" type="image/x-icon">
 </head>
-<body> <!-- This page will be loaded at runtime as a overlay displaying news of the wiki or development assuming it gets traffic. -->
-    <div class="news-container">
+<body>
+<!-- Background Image -->
+<div class="background-area">
+    <img src="assets/asadal_stock_13.jpg" alt="Abstract blue and yellow background">
+</div>
 
-    </div>
+<!-- Main Page Container -->
+<div class="container">
+    <!-- Header Section (Consistent across pages) -->
+    <header class="header">
+        <div class="logo-area">
+            <img src="assets/FrutigerWikiLogo.png" alt="Frutiger Space Logo" class="wiki-logo">
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Main Game</a>
+            <a href="news.html" class="active">News</a>
+            <a href="Community.html">Community</a>
+            <a href="about-us.html">Info</a>
+        </nav>
+        <div id="clock-display" class="clock-display">
+            <!-- Javascript will populate this -->
+        </div>
+    </header>
+
+    <!-- Main Content for News page -->
+    <main class="main-content">
+        <div class="news-feed">
+            <h1>Latest News & Articles</h1>
+
+            <!-- This is the template for a single news entry. Your PHP will generate these blocks. -->
+            <article class="news-entry box">
+                <header class="entry-header">
+                    <h2 class="entry-title"><a href="#">The Future of Frutiger Space: A Developer Update</a></h2>
+                    <p class="entry-meta">Posted on July 17, 2025 by <a href="#">Jamal</a></p>
+                </header>
+                <div class="entry-content">
+                    <p>Welcome, explorers, to another developer update! We've been hard at work behind the scenes, polishing the crystal-clear oceans and tuning the hum of the monorails. This month, we're excited to pull back the curtain on the upcoming "Aerochrome" update, which will introduce new biomes, weather patterns, and a much-requested photo mode.</p>
+                    <p>The new "Glass Pinnacle" zone will test your traversal skills, while the dynamic rain and sunshine will make your screenshots pop. We can't wait for you to see it. Read on for the full patch notes and a sneak peek at the new content...</p>
+                    <a href="#" class="read-more">Read More &raquo;</a>
+                </div>
+            </article>
+            <!-- End of template entry -->
+
+            <article class="news-entry box">
+                <header class="entry-header">
+                    <h2 class="entry-title"><a href="#">Community Spotlight: The Underwater City Project</a></h2>
+                    <p class="entry-meta">Posted on July 15, 2025 by <a href="#">Toya</a></p>
+                </header>
+                <div class="entry-content">
+                    <p>We're constantly amazed by the creativity of our community. This week, we're shining a spotlight on the incredible "Aqua-Habitat 7" project, a sprawling underwater city built entirely by players. Featuring interconnected glass domes, vibrant coral farms, and a bustling central plaza, it's a testament to collaborative building.</p>
+                    <p>We sat down with the project leads to discuss their inspiration, the challenges they faced, and what's next for their subaquatic metropolis. Check out the full interview and a stunning gallery inside.</p>
+                    <a href="#" class="read-more">Read More &raquo;</a>
+                </div>
+            </article>
+
+            <article class="news-entry box">
+                <header class="entry-header">
+                    <h2 class="entry-title"><a href="#">Patch Notes: Version 1.1.5 Now Live</a></h2>
+                    <p class="entry-meta">Posted on July 12, 2025 by <a href="#">Titsou</a></p>
+                </header>
+                <div class="entry-content">
+                    <p>A new patch has just been deployed! Version 1.1.5 focuses on quality-of-life improvements and bug fixes. We've addressed the issue with dolphin physics, improved server stability, and rebalanced the in-game economy for fish-based products. Your feedback on our Discord has been invaluable in tracking these down.</p>
+                    <a href="#" class="read-more">Read More &raquo;</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer Section (Consistent across pages) -->
+    <footer class="footer">
+        <p>Frutiger Space Wiki 2025™</p>
+    </footer>
+</div>
+
+<!-- Scripts -->
+<script src='javascript/LocalTimer.js'></script>
 </body>
 </html>

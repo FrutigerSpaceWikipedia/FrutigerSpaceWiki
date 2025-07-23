@@ -1,0 +1,113 @@
+/* This file contains styles specific to the News page. */
+/* It should be loaded AFTER the main styles.css file. */
+
+/* Define the pop-in animation */
+@keyframes entry-pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Main content area for a single-column news feed */
+.main-content {
+    flex-direction: column;
+    align-items: center; /* Center the feed horizontally */
+}
+
+.news-feed {
+    width: 100%;
+    max-width: 900px; /* Optimal width for reading articles */
+}
+
+.news-feed > h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+/* Individual News Entry Styling */
+.news-entry {
+    margin-bottom: 25px;
+    padding: 25px 35px; /* More horizontal padding for article text */
+    /* Animation properties */
+    opacity: 0; /* Start hidden */
+    transform: scale(0.95);
+    animation: entry-pop-in 0.5s ease-out forwards;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Stagger the animation for each article */
+.news-entry:nth-child(1) { animation-delay: 0.1s; }
+.news-entry:nth-child(2) { animation-delay: 0.2s; }
+.news-entry:nth-child(3) { animation-delay: 0.3s; }
+.news-entry:nth-child(4) { animation-delay: 0.4s; } /* Add more if needed */
+.news-entry:nth-child(5) { animation-delay: 0.5s; }
+
+.news-entry:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 77, 128, 0.15);
+}
+
+.entry-header {
+    border-bottom: 1px solid rgba(179, 230, 255, 0.8);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.entry-title {
+    margin: 0 0 5px 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.entry-title a {
+    text-decoration: none;
+    color: #004d80;
+    transition: color 0.2s ease;
+}
+
+.entry-title a:hover {
+    color: #007bff;
+}
+
+.entry-meta {
+    font-size: 0.9em;
+    color: #5a8bb1;
+    margin: 0;
+}
+
+.entry-meta a {
+    color: #0056b3;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.entry-meta a:hover {
+    text-decoration: underline;
+}
+
+.entry-content p {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #007bff;
+}

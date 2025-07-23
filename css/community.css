@@ -1,0 +1,112 @@
+/* This file contains styles specific to the Community page. */
+/* It should be loaded AFTER the main styles.css file. */
+
+/* Define the pop-in animation */
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Main content area for a single-column hub layout */
+.main-content {
+    flex-direction: column;
+}
+
+.community-hub {
+    text-align: center;
+    padding: 0 10px; /* Add some padding on smaller screens */
+}
+
+.community-hub > h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.hub-description {
+    font-size: 1.1em;
+    max-width: 70ch;
+    margin: 0 auto 30px auto;
+    color: #336791;
+}
+
+/* Grid for the topic cards */
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.topic-card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* Animation properties */
+    opacity: 0; /* Start hidden */
+    animation: pop-in 0.6s ease-out forwards;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Stagger the animation delay for each card */
+.topic-grid .topic-card:nth-child(1) { animation-delay: 0.1s; }
+.topic-grid .topic-card:nth-child(2) { animation-delay: 0.2s; }
+.topic-grid .topic-card:nth-child(3) { animation-delay: 0.3s; }
+.topic-grid .topic-card:nth-child(4) { animation-delay: 0.4s; }
+.topic-grid .topic-card:nth-child(5) { animation-delay: 0.5s; }
+.topic-grid .topic-card:nth-child(6) { animation-delay: 0.6s; }
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 77, 128, 0.1);
+}
+
+.topic-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #004d80;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(179, 230, 255, 0.8);
+}
+
+.sub-topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-topic-list li {
+    margin-bottom: 8px;
+}
+
+.sub-topic-list li a {
+    text-decoration: none;
+    color: #0056b3;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sub-topic-list li a:hover {
+    color: #007bff;
+    transform: translateX(4px);
+}
+
+.sub-topic-list li a::before {
+    content: '› ';
+    color: #80dfff;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.2s ease;
+}
+
+.sub-topic-list li a:hover::before {
+    color: #007bff;
+}

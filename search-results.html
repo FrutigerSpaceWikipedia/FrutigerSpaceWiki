@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutiger Space Wiki - Search Results</title>
+  <!-- Link to the main Frutiger Aero stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Then link to the search-specific stylesheet -->
+  <link rel="stylesheet" href="css/search-results.css">
+  <link rel="icon" href="assets/FrutigerWikiLogo.png" type="image/x-icon">
+</head>
+<body>
+<!-- Background Image -->
+<div class="background-area">
+  <img src="assets/asadal_stock_13.jpg" alt="Abstract blue and yellow background">
+</div>
+
+<!-- Main Page Container -->
+<div class="container">
+  <!-- Header Section (Consistent across pages) -->
+  <header class="header">
+    <div class="logo-area">
+      <img src="assets/FrutigerWikiLogo.png" alt="Frutiger Space Logo" class="wiki-logo">
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Main Game</a>
+      <a href="news.html">News</a>
+      <a href="community.html">Community</a>
+      <a href="about-us.html">Info</a>
+    </nav>
+    <div id="clock-display" class="clock-display">
+      <!-- Javascript will populate this -->
+    </div>
+  </header>
+
+  <!-- Main Content for Search Results page -->
+  <main class="main-content">
+    <div class="search-container box">
+      <div class="search-header">
+        <h1>Search Wiki</h1>
+        <form action="search.php" method="GET" class="search-form">
+          <input type="text" name="query" class="search-input" placeholder="Search for articles..." value="Aero">
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+
+      <div class="search-results-body">
+        <h2>Results for "Aero"</h2>
+        <ul class="results-list">
+          <!-- This is a template for a single search result. PHP will generate these. -->
+          <li class="search-result-item">
+            <img src="https://placehold.co/50x50/e0f7ff/004d80?text=Icon" alt="Preview Icon" class="result-icon">
+            <div class="result-info">
+              <h3 class="result-title"><a href="article.html">Aero-Hopper (Creature)</a></h3>
+              <p class="result-snippet">The <strong>Aero</strong>-Hopper is a common, passive creature found throughout the Glass Plains and occasionally in the Crystal Spires biome. They are characterized by their glossy, iridescent shells...</p>
+            </div>
+          </li>
+          <!-- End of template item -->
+
+          <li class="search-result-item">
+            <img src="https://placehold.co/50x50/e0f7ff/004d80?text=Icon" alt="Preview Icon" class="result-icon">
+            <div class="result-info">
+              <h3 class="result-title"><a href="#">Frutiger Aero (Aesthetic)</a></h3>
+              <p class="result-snippet">Frutiger <strong>Aero</strong> is a design style and aesthetic that was prevalent from roughly 2004 to 2013. It is characterized by its use of skeuomorphism, glossy textures, glass-like transparency...</p>
+            </div>
+          </li>
+
+          <li class="search-result-item">
+            <img src="https://placehold.co/50x50/e0f7ff/004d80?text=Icon" alt="Preview Icon" class="result-icon">
+            <div class="result-info">
+              <h3 class="result-title"><a href="#">Aerodynamics Guide</a></h3>
+              <p class="result-snippet">This guide covers the basics of flight and <strong>aero</strong>dynamics within Frutiger Space, including lift, drag, and the use of gliders and other aerial vehicles to explore the world...</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section (Consistent across pages) -->
+  <footer class="footer">
+    <p>Frutiger Space Wiki 2025™</p>
+  </footer>
+</div>
+
+<!-- Scripts -->
+<script src='javascript/LocalTimer.js'></script>
+</body>
+</html>

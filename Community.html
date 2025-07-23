@@ -28,6 +28,7 @@
             <a href="news.html">News</a>
             <a href="community.html" class="active">Community</a>
             <a href="about-us.html">Info</a>
+            <a href="themes.html">Preferences</a>
         </nav>
         <div id="clock-display" class="clock-display">
             <!-- Javascript will populate this -->
@@ -40,32 +41,56 @@
             <h1>Community Hub</h1>
             <p class="hub-description">Explore the world of Frutiger Space! Dive into articles about characters, items, locations, and more, all contributed by the community.</p>
 
+            <!-- Search Bar Section -->
+            <div class="search-section box">
+                <form action="search-results.html" method="GET" class="search-form">
+                    <input type="text" name="query" class="search-input" placeholder="Search for articles...">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+
             <div class="topic-grid">
                 <!-- Topic Card: Characters -->
                 <div class="topic-card box">
-                    <h2 class="topic-title">Characters</h2>
+                    <div class="topic-title-bar">
+                        <h2 class="topic-title">Characters</h2>
+                    </div>
                     <ul class="sub-topic-list">
+                        <li><a href="#">Playable Characters</a></li>
                         <li><a href="#">Non-Playable Characters (NPCs)</a></li>
+                        <li><a href="#">Enemies & Creatures</a></li>
+                        <li><a href="#">Factions</a></li>
                     </ul>
                 </div>
                 <!-- Topic Card: Items -->
                 <div class="topic-card box">
-                    <h2 class="topic-title">Items & Equipment</h2>
+                    <div class="topic-title-bar">
+                        <h2 class="topic-title">Items & Equipment</h2>
+                    </div>
                     <ul class="sub-topic-list">
                         <li><a href="#">Hats & Cosmetics</a></li>
-                        <li><a href="#">Collectibles/badges</a></li>
+                        <li><a href="#">Tools & Gadgets</a></li>
+                        <li><a href="#">Resources & Materials</a></li>
+                        <li><a href="#">Collectibles</a></li>
                     </ul>
                 </div>
                 <!-- Topic Card: World -->
                 <div class="topic-card box">
-                    <h2 class="topic-title">The World</h2>
+                    <div class="topic-title-bar">
+                        <h2 class="topic-title">The World</h2>
+                    </div>
                     <ul class="sub-topic-list">
                         <li><a href="#">Locations & Biomes</a></li>
+                        <li><a href="#">Points of Interest</a></li>
+                        <li><a href="#">Flora & Fauna</a></li>
+                        <li><a href="#">Lore & History</a></li>
                     </ul>
                 </div>
                 <!-- Topic Card: Events -->
                 <div class="topic-card box">
-                    <h2 class="topic-title">Events</h2>
+                    <div class="topic-title-bar">
+                        <h2 class="topic-title">Events</h2>
+                    </div>
                     <ul class="sub-topic-list">
                         <li><a href="#">Past Community Events</a></li>
                         <li><a href="#">Seasonal Events</a></li>
@@ -74,7 +99,9 @@
                 </div>
                 <!-- Topic Card: Miscellaneous -->
                 <div class="topic-card box">
-                    <h2 class="topic-title">Miscellaneous</h2>
+                    <div class="topic-title-bar">
+                        <h2 class="topic-title">Miscellaneous</h2>
+                    </div>
                     <ul class="sub-topic-list">
                         <li><a href="#">Community Guides</a></li>
                         <li><a href="#">Fan Art & Creations</a></li>

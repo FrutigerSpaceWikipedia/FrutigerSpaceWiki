@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutiger Space Wiki - Edit Article</title>
+  <!-- Link to the main Frutiger Aero stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Then link to the edit page specific stylesheet -->
+  <link rel="stylesheet" href="css/edit-article.css">
+  <link rel="icon" href="assets/FrutigerWikiLogo.png" type="image/x-icon">
+</head>
+<body>
+<!-- Background Image -->
+<div class="background-area">
+  <img src="assets/asadal_stock_13.jpg" alt="Abstract blue and yellow background">
+</div>
+
+<!-- Main Page Container -->
+<div class="container">
+  <!-- Header Section (Consistent across pages) -->
+  <header class="header">
+    <div class="logo-area">
+      <img src="assets/FrutigerWikiLogo.png" alt="Frutiger Space Logo" class="wiki-logo">
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Main Game</a>
+      <a href="news.html">News</a>
+      <a href="community.html">Community</a>
+      <a href="about-us.html">Info</a>
+    </nav>
+    <div id="clock-display" class="clock-display">
+      <!-- Javascript will populate this -->
+    </div>
+  </header>
+
+  <!-- Main Content for Edit page -->
+  <main class="main-content">
+    <div class="editor-container box">
+      <!-- The form will submit to your PHP script -->
+      <form action="save-article.php" method="POST">
+        <div class="editor-header">
+          <h1>Editing: <span contenteditable="true">Aero-Hopper (Creature)</span></h1>
+          <p>Create and edit wiki content using the form below. Use standard wiki markup for formatting.</p>
+        </div>
+
+        <div class="editor-body">
+          <label for="article-title">Page Title</label>
+          <input type="text" id="article-title" name="title" value="Aero-Hopper (Creature)">
+
+          <div class="image-inputs">
+            <div class="input-group">
+              <label for="preview-icon-url">Preview Icon URL</label>
+              <input type="text" id="preview-icon-url" name="preview_icon" placeholder="https://example.com/icon.png">
+            </div>
+            <div class="input-group">
+              <label for="main-image-url">Main Article Image URL</label>
+              <input type="text" id="main-image-url" name="main_image" placeholder="https://example.com/main_image.jpg">
+            </div>
+          </div>
+
+          <fieldset class="infobox-editor">
+            <legend>Infobox Editor</legend>
+            <div class="input-group">
+              <label for="infobox-title">Infobox Title</label>
+              <input type="text" id="infobox-title" name="infobox_title" value="Aero-Hopper">
+            </div>
+            <label>Infobox Data</label>
+            <div class="infobox-data-pairs">
+              <div class="pair">
+                <input type="text" name="infobox_key[]" placeholder="Key (e.g., Type)" value="Type">
+                <input type="text" name="infobox_value[]" placeholder="Value (e.g., Fauna)" value="Fauna">
+              </div>
+              <div class="pair">
+                <input type="text" name="infobox_key[]" placeholder="Key" value="Habitat">
+                <input type="text" name="infobox_value[]" placeholder="Value" value="Glass Plains">
+              </div>
+              <div class="pair">
+                <input type="text" name="infobox_key[]" placeholder="Key" value="Diet">
+                <input type="text" name="infobox_value[]" placeholder="Value" value="Herbivore">
+              </div>
+              <div class="pair">
+                <input type="text" name="infobox_key[]" placeholder="Key" value="Temperament">
+                <input type="text" name="infobox_value[]" placeholder="Value" value="Passive">
+              </div>
+            </div>
+          </fieldset>
+
+          <label for="article-content">Page Content</label>
+          <textarea id="article-content" name="content" rows="15">The **Aero-Hopper** is a common, passive creature found throughout the Glass Plains...
+                        </textarea>
+
+          <label for="edit-summary">Edit Summary (Briefly describe your changes)</label>
+          <input type="text" id="edit-summary" name="summary" placeholder="e.g., added details about drops">
+        </div>
+
+        <div class="editor-footer">
+          <button type="submit" class="save-button">Save Page</button>
+          <a href="article.html" class="cancel-link">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Section (Consistent across pages) -->
+  <footer class="footer">
+    <p>Frutiger Space Wiki 2025™</p>
+  </footer>
+</div>
+
+<!-- Scripts -->
+<script src='javascript/LocalTimer.js'></script>
+</body>
+</html>

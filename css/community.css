@@ -37,6 +37,62 @@
     color: #336791;
 }
 
+/* Search Section on Community Hub */
+.search-section {
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: rgba(224, 247, 255, 0.7);
+    opacity: 0; /* Start hidden for animation */
+    animation: pop-in 0.6s ease-out forwards;
+    animation-delay: 0.1s; /* Make it appear first */
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    font-size: 1.1em;
+    border: 1px solid #a4dcf8;
+    border-radius: 20px;
+    background-color: #f7fcff;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06), 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.search-button {
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-decoration: none;
+    background: linear-gradient(to bottom, #0096ff, #007bff);
+    border: 1px solid #0056b3;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.search-button:hover {
+    background: linear-gradient(to bottom, #2caaff, #008cff);
+    transform: translateY(-1px);
+}
+
+
 /* Grid for the topic cards */
 .topic-grid {
     display: grid;
@@ -45,41 +101,58 @@
 }
 
 .topic-card {
-    text-align: left;
     display: flex;
     flex-direction: column;
-    /* Animation properties */
+    padding: 0; /* Remove padding from the card itself */
     opacity: 0; /* Start hidden */
     animation: pop-in 0.6s ease-out forwards;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 8px; /* Ensure the container has rounded corners */
+    overflow: hidden; /* Hide anything that goes outside the rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7), 0 3px 5px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
 }
 
 /* Stagger the animation delay for each card */
-.topic-grid .topic-card:nth-child(1) { animation-delay: 0.1s; }
-.topic-grid .topic-card:nth-child(2) { animation-delay: 0.2s; }
-.topic-grid .topic-card:nth-child(3) { animation-delay: 0.3s; }
-.topic-grid .topic-card:nth-child(4) { animation-delay: 0.4s; }
-.topic-grid .topic-card:nth-child(5) { animation-delay: 0.5s; }
-.topic-grid .topic-card:nth-child(6) { animation-delay: 0.6s; }
+.topic-grid .topic-card:nth-child(1) { animation-delay: 0.2s; }
+.topic-grid .topic-card:nth-child(2) { animation-delay: 0.3s; }
+.topic-grid .topic-card:nth-child(3) { animation-delay: 0.4s; }
+.topic-grid .topic-card:nth-child(4) { animation-delay: 0.5s; }
+.topic-grid .topic-card:nth-child(5) { animation-delay: 0.6s; }
 
 .topic-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 77, 128, 0.1);
 }
 
+/* Frutiger Aero style title bar */
+.topic-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #e0f7ff, #b3e6ff);
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
 .topic-title {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 600;
     color: #004d80;
-    margin: 0 0 15px 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(179, 230, 255, 0.8);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
 }
 
 .sub-topic-list {
     list-style: none;
-    padding: 0;
+    padding: 15px;
     margin: 0;
+    background-color: rgba(240, 248, 255, 0.8);
+    flex-grow: 1;
 }
 
 .sub-topic-list li {

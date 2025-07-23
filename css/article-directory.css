@@ -1,0 +1,119 @@
+/* This file contains styles specific to the article directory page. */
+/* It should be loaded AFTER the main styles.css file. */
+
+/* Main content area for a single-column directory layout */
+.main-content {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.directory-container {
+    width: 100%;
+}
+
+.directory-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(179, 230, 255, 0.8);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.directory-header h1 {
+    color: #004d80;
+    margin: 0 0 10px 0;
+}
+
+.directory-header p {
+    font-size: 1.1em;
+    max-width: 70ch;
+    margin: 0 auto;
+    color: #336791;
+}
+
+/* A-Z Index Bar */
+.az-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    background: rgba(224, 247, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.az-index a {
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.az-index a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Directory Body and Sections */
+.directory-section {
+    margin-bottom: 20px;
+}
+
+.directory-section h2 {
+    font-size: 2em;
+    color: #004d80;
+    border-bottom: 1px solid rgba(179, 230, 255, 0.8);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.article-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 3; /* Create multi-column layout */
+    column-gap: 20px;
+}
+
+.article-list li {
+    margin-bottom: 10px;
+    break-inside: avoid-column; /* Prevent items from breaking across columns */
+}
+
+.article-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #0056b3;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.article-list a:hover {
+    background-color: rgba(224, 247, 255, 0.9);
+    color: #007bff;
+}
+
+.article-list img {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #a4dcf8;
+}
+
+/* Responsive columns for smaller screens */
+@media (max-width: 768px) {
+    .article-list {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-list {
+        column-count: 1;
+    }
+}

@@ -120,6 +120,8 @@
 .topic-grid .topic-card:nth-child(3) { animation-delay: 0.4s; }
 .topic-grid .topic-card:nth-child(4) { animation-delay: 0.5s; }
 .topic-grid .topic-card:nth-child(5) { animation-delay: 0.6s; }
+.topic-grid .topic-card:nth-child(6) { animation-delay: 0.7s; } /* Added delay for the new card */
+
 
 .topic-card:hover {
     transform: translateY(-5px);
